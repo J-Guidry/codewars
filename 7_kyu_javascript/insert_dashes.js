@@ -12,23 +12,31 @@ function insertDash(num) {
   let numStr = "" + num + "";
   let numArr = numStr.split("");
   numArr = numArr.map((strNum) => parseInt(strNum));
-  let copyArr = numArr;
+  let copyArr = numArr.slice(0);
   console.log(numArr);
-  //let dashIndices = [];
+  let dashIndices = [];
 
-  for (let i = 0; i < numArr.length; i++) {
-    //     console.log(numArr[i]);
-    if (i === numArr.length - 1) break;
-    let number = numArr[i];
-    let nextNum = numArr[i + 1];
-    if (number % 2 === 1 && number >= 0 && nextNum % 2 === 1) {
-      console.log(i, number);
-      copyArr.splice(i, 0, "-");
-      //dashIndices.push(i);
-    }
-  }
-  return copyArr; //.join('');
+  let newArr = copyArr.map((number, index, arr) => {
+    console.log(number);
+    number * 3;
+  });
+  return newArr; //.join('');
 }
+
+insertDash(454793);
+
+// for (let i = 0; i < numArr.length; i++) {
+//   //     console.log(numArr[i]);
+//   if (i === numArr.length - 1) break;
+//   let number = numArr[i];
+//   let nextNum = numArr[i + 1];
+//   if (number % 2 === 1 && number >= 0 && nextNum % 2 === 1) {
+//     console.log(`at index ${i}, this number, ${number}, is odd and next number after is also odd. this means that a dash should be inserted after this number and index`);
+//     //copyArr.splice(i, 0, "-");
+//     dashIndices.push(i);
+//   }
+// }
+
 /*
 P.R.E.P.
 Parameters - a big number
