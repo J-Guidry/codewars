@@ -26,17 +26,17 @@ function insertDash(num) {
         `at index ${i}, this number, ${number}, is odd and next number after is also odd. this means that a dash should be inserted after this number and index`
       );
       //copyArr.splice(i, 0, "-");
-      dashIndices.push(i);
+      dashIndices.push(number);
     }
   }
 
   const arrGroup = [];
   for (let i = 0; i < dashIndices.length; i++) {
     if (i === 0) {
-      let part = numArr.slice(0, dashIndices[i]);
+      //let part = numArr.slice(0, dashIndices[i]);
       arrGroup.push(part);
     } else {
-      let part = numArr.slice(dashIndices[i]);
+      //let part = numArr.slice(dashIndices[i]);
       arrGroup.push(part);
     }
     //if i is 0, slice starts at 0, if i is more than 1,
